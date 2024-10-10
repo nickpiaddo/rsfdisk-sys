@@ -13,10 +13,7 @@ fn main() {
         .probe("fdisk")
     {
         Ok(lib) => lib,
-        Err(e) => {
-            println!("run pkg_config failed: {:?}", e);
-            return;
-        }
+        Err(e) => panic!("run pkg_config failed: {:?}", e),
     };
 
     //  Determine libfdisk's version.
