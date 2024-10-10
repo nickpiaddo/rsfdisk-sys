@@ -13,6 +13,8 @@ keywords = ["ffi", "bindings"]
 categories = ["external-ffi-bindings", "os"]
 edition = "2021"
 exclude = ["web-snapshots/*"]
+build = "build/build.rs"
+links = "fdisk"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -20,4 +22,5 @@ exclude = ["web-snapshots/*"]
 
 [build-dependencies]
 bindgen = "0.66.1"
+cc = "1.1.28"
 pkg-config = "0.3.30"
